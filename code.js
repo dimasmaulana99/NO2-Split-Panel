@@ -87,3 +87,22 @@ ui.root.add(splitPanel)
 
 var linkPanel = ui.Map.Linker([leftMap, rightMap])
 leftMap.centerObject (jawa, 7);
+
+//Export
+Export.image.toDrive({
+  image:  clip19,
+  description:  'NO2_2019',
+  scale:  100,
+  region: jawa,
+  maxPixels: 1e13,
+  fileFormat: 'GeoTIFF',
+});
+
+Export.image.toDrive({
+  image:  clip20,
+  description:  'NO2_2020',
+  scale:  100,
+  region: jawa,
+  maxPixels: 1e13,
+  fileFormat: 'GeoTIFF',
+});
